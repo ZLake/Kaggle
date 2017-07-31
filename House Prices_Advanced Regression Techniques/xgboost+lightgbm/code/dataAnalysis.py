@@ -114,6 +114,7 @@ all_data_na = (all_data.isnull().sum() / len(all_data)) * 100
 all_data_na = all_data_na.drop(all_data_na[all_data_na == 0].index).sort_values(ascending=False)[:30]
 missing_data = pd.DataFrame({'Missing Ratio' :all_data_na})
 missing_data.head(20)
+print("missing data column numbers:{}".format(missing_data.shape[0]))
 #Plot the missing columns with percentage
 #==============================================================================
 # f, ax = plt.subplots(figsize=(15, 12))
